@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+            <input type="text" placeholder="Enter your username" Id="username"><br><br>
+            <input type="password" placeholder="Enter your password" Id="password">
+            <button onclick="loginsystem()">Login</button>
+    </div>
+
+
+    <script>
+            function loginsystem(){
+
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                //database
+                var regusername = "admin";
+                var regpass = "1234";
+
+
+                if(username == regusername && password == regpass) {
+
+                    location.replace("https://www.youtube.com/");
+                }
+                else if(username != regusername && password != regpass) {
+                    document.write("Username and password both are wrong");
+                }
+                else if(username != regusername && password == regpass) {
+
+                    document.write("Username is incorrect");
+                }
+                else if(username == regusername && password != regpass) {
+
+                    document.write("Password is incorrect");
+                }
+            }
+
+
+    </script>
+
+</body>
+</html>
